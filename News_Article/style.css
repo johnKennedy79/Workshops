@@ -1,0 +1,38 @@
+header{
+    background-image: url("https://www.goodnewsnetwork.org/wp-content/uploads/2021/05/meteor-shower-cc-license-wikimedia-commons-Channone-Arif-1.jpg");
+    background-size: contain;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  body{
+    margin:0;
+  }
+  h1{font-family: 'Times New Roman', Times, serif;
+     color: white;
+    }
+  author {color: white;}
+  date {color: white ;}
+  header a{ 
+    color: blue;
+    text-decoration: none;
+    grid-auto-rows: auto;
+    
+    padding: 5px;
+    background-color: green;
+  }
+  img{width: 800px;
+      height: 400px;}
+  
+  nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    justify-content: space-around;
+  }
+  .credit {
+    font-size: 8pt;
+  }

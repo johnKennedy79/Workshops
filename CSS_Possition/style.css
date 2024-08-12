@@ -1,0 +1,60 @@
+/*absolute image container*/
+.imageContainer{
+    background: #eee;
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+  }
+  
+  /* title style*/
+  h2 {
+    color: white;
+    background:lightblue;
+    font-size: 2rem;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin:0px;
+  }
+  img{
+    max-width:100%;
+    background: #eef
+  }
+  /*relative .container*/
+  .imageContainer2{
+    position:relative;
+    background: #eee;
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+  }
+  
+  /*cookieNotice*/
+  .cookieNotice{
+    background: #eee;
+    padding: 20px;
+    position: fixed;
+    bottom: 10px;
+      Left: 200px
+    
+  }
+  .cookieNotice button{
+    color: white;
+    background-color: lightslategrey;
+    border: solid black 2px;
+    font-size: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  .cookieNotice button:hover {
+    background-color: lightblue;
+    color: black;
+    border: solid 4px pink;
+    font-size: 2Rem;
+  }
+  .cookieNotice p {
+    background: #eee;
+    font-size: 2rem;
+  }

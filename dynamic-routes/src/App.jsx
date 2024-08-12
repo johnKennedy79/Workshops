@@ -5,16 +5,16 @@ import Animals from "./pages/Animals.jsx";
 import UserPostsPage from "./pages/userposts.jsx";
 import UserLikesPage from "./pages/userlikes.jsx";
 import SortOrderForm from "./pages/sortform.jsx";
-
+import "./App.css";
+import "./css/home.css";
 export default function App() {
   return (
     <>
       <BrowserRouter>
+        <h1 className="Titel">Instaface</h1>
         <div className="App">
           <Link to="/">Home </Link>
-          <Link to="profile">Profile </Link>
           <Link to="Animals">Animals </Link>
-          <Link to="sort">SortForm</Link>
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +25,7 @@ export default function App() {
           <Route path="sort" element={<SortOrderForm />} />
           <Route path="/Animals" element={<Animals />} />
         </Routes>
-        <footer>&copy;2024</footer>
+        <footer className="pageFoot">&copy;2024</footer>
       </BrowserRouter>
     </>
   );

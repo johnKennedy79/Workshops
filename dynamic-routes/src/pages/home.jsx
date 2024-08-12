@@ -1,42 +1,56 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Home() {
-  const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-  });
-  function handleSubmit(event) {
+export default function Login() {
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("The form values are", formValues);
-  }
+    setError("");
+    //validate entries
+    if (!userName || !password) {
+      setError("Please enter both User Name and Password");
+      return;
+    }
+    console.log("login attempted with", { userName, password });
+    //If login sucsessful redirect to profile page
+    navigate(`/profile/${userName}`);
+  };
 
-  function handleInputChange(event) {
-    setFormValues({ formValues, [event.target.name]: event.target.value });
-  }
   return (
-    <>
-      <h1>This is my home page</h1>;
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
+    <div className="LoginBox">
+      <div>
+        <h2>Login</h2>
+        {error && <alert>{error}</alert>}
+      </div>
+      <form id="Loginform" onSubmit={handleSubmit}>
+        <label htmlFor="name"> User Name </label>
         <input
           type="text"
           id="name"
           name="name"
-          value={formValues.name}
-          onChange={handleInputChange}
+          placeholder="Enter User Name Here..."
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
         />
-        <label htmlFor="email">Email</label>
+        <br />
+        <br />
+        <label htmlFor="password">Password</label>
         <input
-          type="email"
-          id="email"
-          name="email"
-          value={formValues.email}
-          onChange={handleInputChange}
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter Password Here..."
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
-        <p>Current Value is {formValues.name}</p>
-        <p>Current Value is {formValues.email}</p>
-        <button type="submit">Submit</button>
       </form>
-    </>
+      <button className="Btn" type="submit" onClick={handleSubmit}>
+        Login
+      </button>
+    </div>
   );
 }

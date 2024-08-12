@@ -1,0 +1,41 @@
+.Titel {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  background-color: #4132a0;
+  justify-content: center;
+  text-align: center;
+  color: chartreuse;
+  font-size: 32pt;
+  margin: 0;
+}
+.App {
+  position: fixed;
+  top: 4rem;
+  width: 100vw;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #4132a0;
+}
+a {
+  color: chartreuse;
+  text-decoration: none;
+}
+a:hover {
+  color: antiquewhite;
+}
+.content {
+  margin-top: 8rem;
+}
+.pageFoot {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  height: 2rem;
+  width: 100vw;
+  background-color: #4132a0;
+  color: chartreuse;
+}
